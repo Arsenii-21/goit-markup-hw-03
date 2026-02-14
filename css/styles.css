@@ -1,5 +1,5 @@
 header {
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .header-container {
@@ -9,25 +9,27 @@ header {
     padding: 24px 0;
 }
 
-.nav-list,
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-list a {
+    display: block;
+    padding: 8px 0;
+}
+
 .address-list {
     display: flex;
-    gap: 24px;
-    padding: 0;
-    margin: 0;
+    gap: 40px;
 }
-
-.nav-list li,
-.address-list li {
-    list-style: none;
-}
-
 .nav-list a,
 .address-list a {
     display: block;
     padding: 8px 0;
     margin: 0;
 }
+
 body {
     font-family: Roboto, sans-serif;
     color: #2E2F42;
@@ -130,11 +132,11 @@ address {
 }
 
 .container {
-    max-width: 100%;
+    max-width: 1158px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 h1 {
@@ -149,13 +151,18 @@ h1 {
 
 .hero-section {
     background-color: #2E2F42;
-    text-align: left;
+    text-align: center;
+}
+
+.hero-title {
+    max-width: 496px;
+    margin: 0 auto;
 }
 
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
-    margin: 0;
+    margin: 0;;
 }
 
 button {
@@ -166,14 +173,19 @@ button {
     cursor: pointer;
 }
 
+.hero-button-wrapper {
+    margin-top: 48px;
+}
+
 .hero-button {
     background-color: #4D5AE5;
-    color: #FFFFFF;
-    cursor: pointer;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    border: none;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
+    cursor: pointer;
 }
 
 .hero-button:hover,
@@ -214,6 +226,13 @@ p {
     gap: 24px;
 }
 
+.features-card {
+    padding: 32px 16px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 0 0 16px 16px;
+}
+
 .features-item {
     width: calc((100% - 72px) / 4);
 }
@@ -229,8 +248,13 @@ p {
 .team-list {
     display: flex;
     gap: 24px;
-    padding: 0;
-    margin: 0;
+}
+
+.team-card {
+    padding: 32px 16px;
+    background-color: #fff;
+    border-radius: 0 0 16px 16px;
+    text-align: center;
 }
 
 .team-list li {
@@ -246,7 +270,7 @@ p {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 48px 24px;
     padding: 0;
     margin: 0;
 }
@@ -262,13 +286,16 @@ p {
     padding: 32px 16px;
 }
 
-.portfolio-list img {
+.portfolio-list img,
+.team-list img {
     display: block;
     width: 100%;
 }
 
 .footer {
     background-color: #2E2F42;
+    text-align: center;
+    padding: 40px 0;
 }
 
 .footer .container {
@@ -286,6 +313,17 @@ p {
 .footer-text {
     color: #f4f4fd;
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
