@@ -4,9 +4,16 @@ header {
 
 .header-container {
     display: flex;
-    gap: 76px;
-    align-items: center;
     padding: 24px 0;
+    align-items: center;
+}
+
+nav {
+    margin-left: 76px;
+}
+
+address {
+    margin-left: auto;
 }
 
 .nav-list {
